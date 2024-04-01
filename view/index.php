@@ -12,7 +12,7 @@
     <div class="container">
         <div class="top-bar">
             <div class="left-items">
-                <button class="btn">ورود / ثبت نام </button>
+                <a class="btn" href="sign-up.php">ورود / ثبت نام </button>
                 <button class="btn">سبد خرید</button>
             </div>
             <div class="right-items">

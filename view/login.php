@@ -25,7 +25,7 @@
     <div> <label class="danger"><?=$error["pass"]??''?></label> </div>
       <button type="submit" class="btn">ورود</button>
       <div class="signup-link">
-        <a href="sign-up.html">ساخت حساب</a>
+        <a href="sign-up.php">ساخت حساب</a>
       </div>
     </form>
   </div>
