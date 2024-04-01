@@ -1,0 +1,71 @@
+
+@media (max-width: 768px) {
+ .links {
+    display:none;
+    position: absolute;
+    background-color:rgb(9, 104, 194);
+    left: 85%;
+    right: 2%;
+    text-align: center;
+    padding: 16px 0px 16px;
+    width: 90px;
+  }
+  .links li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #0e45db;
+  color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+
+}
+
+
+li {
+  list-style: none;
+}
+
+
+.nav-button a {
+  color: #fff;
+}
+
+.info {
+  font-size: 20px;
+  color :black;
+  margin-left: 3;
+}
+
+
+.links {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.links li {
+  padding: 5px 14px;
+}
+
+input[type=checkbox] {
+  display: none;
+} 
+
+
