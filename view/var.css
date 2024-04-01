@@ -1,10 +1,12 @@
+
 :root {
-    --back-col: #1f293a;
+   background-color: #1f293a;
     --h2-col: #0ef;
     --border-col1: #2c4766;
     --border-col2: #0ef;
     --text-btn-col: #1f293a;
     --back-btn-col: #0ef;
     --link-col: #0ef;
-    --danger-col :rgb(216, 6, 6);
+    --danger-col :rgb(55, 51, 51);
 }
+
