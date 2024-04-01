@@ -25,3 +25,6 @@ function pdo_fetch(PDOStatement $sth,int $mode = PDO::FETCH_DEFAULT,int $cursorO
 {
 	return $sth->fetch($mode,$cursorOrientation,$cursorOffset);
 }
+function pdo_fetchall_default(PDOStatement $sth){
+	return $sth->fetchAll();
+}
