@@ -22,9 +22,13 @@ function signin_array()
 	];
 }
 function insert_user (PDO $dbh,array $users){
-	$row=userrow($dbh,$users["needed"]["user"]);
-	if($row){
-		return ["user"=>"User name exist"];
+	$rowuser=userrow($dbh,$users["needed"]["user"]);
+	$rowemail=userrow($dbh,$users["needed"]["email"]);
+	if($rowuser || $rowemail){
+		$error = [];
+		$error += $rowemail?["email"=>"Email exist"]:[];
+		$error += $rowuser?["user"=>"User name exist"]:[];
+		return $error;
 	}
 	$sth=pdo_prepare($dbh,
 		"INSERT INTO users "

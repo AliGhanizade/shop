@@ -1,3 +1,14 @@
+<?php
+require_once "../controller/login.php";
+require_once "../model/user.php";
+require_once "../model/pdo.php";
+$username = false;
+if (($userid=loggedin())!==false) {
+	if (($row=userid2username($dbh,$userid)) != false ){
+	$username=$row["username"];
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +23,13 @@
     <div class="container">
         <div class="top-bar">
             <div class="left-items">
-                <a class="btn" href="sign-up.php">ورود / ثبت نام </button>
+<?php if($username==false){ 
+                echo '<a class="btn" href="sign-up.php">ورود / ثبت نام </a>';
+} else{
+	$husername = htmlentities($username);
+	echo '<a class="btn" href="userpage/?=username"' .$husername .'>' .$husername .'</a>';
+} ?>
+
                 <button class="btn">سبد خرید</button>
             </div>
             <div class="right-items">
