@@ -89,7 +89,7 @@ if (($userid=loggedin())!==false) {
          </div>
          <div class="separator" style="margin-top: 50px;">
          <h1 class="hot-categories" style=" margin-top: 80px;">دسته های داغ</h1>
-         <div class="categories" style="display: flex; justify-content: center; flex-wrap: wrap;">
+         <div class="categories" class="amir">
             <div class="category">
                 <a href="category1.html">
                     <img src="picture/palette-svgrepo-com.svg" alt="">

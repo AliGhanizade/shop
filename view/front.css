@@ -151,3 +151,6 @@ h1.hot-categories {
 .separator::after {
   margin-left: 20px;
 }
+.amir {
+  display: flex; justify-content: center; flex-wrap: wrap;
+}
