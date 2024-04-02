@@ -20,18 +20,10 @@
     padding: 22px;
     border-radius: 5px;
     background-color:  #a8a8a8;
-    transition: background-color 0.3s, transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: background-color 0.3s;
     /*flex: 1 1 20%;
     flex-grow: 1;*/
   }
-
-  .category.active {
-    transform: scale(1.07);
-  }
-
-.category.active img {
-    filter: brightness(110%);
-}
 
   .category img{
     object-fit: cover;
@@ -55,13 +47,13 @@ margin-top: 10px;
   } */
   .category a:hover,
   .category a:hover p {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-  /* .category:hover{
-    background-color: #ccc;
-    transform: scale(1.07);
-  }
+    font-weight: bold;}
+    /* font-size: 1.2em;
+ */
+  .category:hover{
+    background-color: #ccc;}
+     /*transform: scale(1.07);
+  
   .category:hover ~ .category{
     transform: scale(1);
   }  */
@@ -169,4 +161,77 @@ link{
 }
 :root {
   background-color: #1f293a;
+}
+
+.footer {
+  margin-top: 500px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* .footer-left, .footer-center, .footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+} */
+.footer-left{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-left a, .footer-center a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.footer-left img {
+  max-width: 30px;
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-left, .footer-center, .footer-right {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    margin-left: 0;
+}
+.footer-left img {
+  max-width: 20px;
+}
+.footer-right {
+  font-size: 12px;
+}
 }
