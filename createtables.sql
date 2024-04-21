@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS items (
 	creation_date   	INTEGER   NOT NULL,
 	rating 			INTEGER,
 	ratingnum		INTEGER,
+	click			INTEGER,
 	status			INTEGER, CHECK ( price != 0 AND
 	 rating < 6 )
 	);
@@ -50,5 +51,6 @@ CREATE TABLE IF NOT EXISTS basket (
 CREATE TABLE IF NOT EXISTS categories (
 	categoryid	TEXT	PRIMARY KEY,
 	categoryname	TEXT	NOT NULL,
-	categoryimage	TEXT
+	categoryimage	TEXT,
+	click			INTEGER
 	);
