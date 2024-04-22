@@ -43,7 +43,7 @@ if (($userid=loggedin())!==false) {
             <a href="#" class="nav-item">درباره ما</a>
         </div>
         <img style="width: 100vw;    height: auto;    margin-top: 20px;" src="picture/poster Up.webp" alt="">
-         <div class="categories" style="margin-top: 50px; ">
+         <div class="categories" class="amir" style="margin-top: 50px; ">
             <div class="category">
                  <a href="category1.html">
                     <img src="picture/palette-svgrepo-com.svg" alt="Category 1">
