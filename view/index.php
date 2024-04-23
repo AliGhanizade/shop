@@ -92,7 +92,7 @@ if (($userid = loggedin()) !== false) {
         <div class="separator" style="margin-top: 50px;">
             <h1 class="hot-categories" style=" margin-top: 80px;">دسته های داغ</h1>
             <div class="categories" class="amir">
-                <?php require "../model/hot-cate.php";
+                <?php require "../view/hot-cate.php";
                 foreach ($rows as $row) {
                     echo "<div class='category'>";
                     echo "<a href=category/$row[categoryid] >";
