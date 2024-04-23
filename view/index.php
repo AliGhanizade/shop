@@ -8,6 +8,26 @@ if (($userid = loggedin()) !== false) {
         $username = $row["username"];
     }
 }
+
+if(isset($_GET['search'])){
+    $db = new PDO('sqlite:db.db');
+    $searchTerm = $_GET['search'];
+    $query = "SELECT * FROM categories WHERE categoryname LIKE '%$searchTerm%'";
+    $result = $db->query($query);
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+        echo '<div class="result">';
+        echo '<h3>' . $row['categoryname'] . '</h3>';
+        $categoryId = $row['categoryid'];
+        $productsQuery = "SELECT * FROM categories WHERE categoryid = $categoryId";
+        $productsResult = $db->query($productsQuery);
+        while ($product = $productsResult->fetch(PDO::FETCH_ASSOC))
+        {
+            echo '<p>' . $product['categoryname'] . '</p>';
+        }
+        echo '</div>';
+    }
+    $db = null;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +39,7 @@ if (($userid = loggedin()) !== false) {
     <link rel="stylesheet" href="front.css">
     <link rel="stylesheet" href="var.css">
     <link rel="stylesheet" href="tap.bar footer.css">
+    <link rel="stylesheet" href="search.php">
 </head>
 
 <body>
@@ -35,15 +56,23 @@ if (($userid = loggedin()) !== false) {
                 <button class="btn">سبد خرید</button>
             </div>
             <div class="right-items">
-                <input type="text" placeholder="جستجو...">
-                <button class="btn">جستجو</button>
+                <form method="get" action="">
+                <input type="text" name="search" placeholder="جستجو..." id="searchInput">
+                <button type="submit" id="searchButton">جستجو</button>
+                 </form>
+                 <div class="search-results">
+             
+                </div>
+             
+                 
+                
             </div>
         </div>
-        <div class="second-row">
+        <!-- <div class="second-row">
             <a href="#" class="nav-item">دسته بندی</a>
             <a href="#" class="nav-item">پیگیری سفارشات</a>
             <a href="#" class="nav-item">درباره ما</a>
-        </div>
+        </div> -->
         <img style="width: 100vw;    height: auto;    margin-top: 20px;" src="picture/poster Up.webp" alt="">
         <div class="categories" class="amir" style="margin-top: 50px; ">
             <div class="category">
@@ -119,6 +148,20 @@ if (($userid = loggedin()) !== false) {
                 <p>آدرس: خیابان معلم ، معلم 53 ، بین قایم مقام 32 34</p>
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#searchInput').on('input', function() {
+                var searchTerm = $(this).val();
+                $.get('search.php', {search: searchTerm}, function(data) {
+                    $('.search-results').html(data);
+                });
+            });
+        });
+    </script>
+   
+     
+
 </body>
 
 </html>

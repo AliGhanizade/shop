@@ -153,3 +153,15 @@ h1.hot-categories {
 .amir {
   display: flex; justify-content: center; flex-wrap: wrap;
 }
+.result {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.search-results {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
