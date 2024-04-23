@@ -1,71 +1,172 @@
-
-@media (max-width: 768px) {
- .links {
-    display:none;
-    position: absolute;
-    background-color:rgb(9, 104, 194);
-    left: 85%;
-    right: 2%;
-    text-align: center;
-    padding: 16px 0px 16px;
-    width: 90px;
-  }
-  .links li + li {
-    margin-top: 12px;
-  }
-
-  input[type=checkbox]:checked ~ .menu {
-    display: block;
-  }
-  .hamburger {
-    display: block;
-  }
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #0e45db;
-  color: #000000;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  font-family: Arial;
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+:root{
+	--nav-bgcl:blue;
+	--nav-fgcl:white;
+	--bordercl:gray;
+	--acent:green;
+	--inputbg:darkgray;
+	--buttonbg:darkgray;
+	--input-hover-outline:white;
+	--input-hover-bg:white;
+	--input-border-hover-w:white;
+	--input-focus-bg:white;
+	--inputfg:white;
+	--nav-button-hover-bg:white;
+	--nav-button-hover-fg:black;
+	--nav-menu-bg:navy;
+	--button-hoverbg:navy;
+	--button-pressbg:black;
+	--inputplaceholher:lightgray;
+	--nav-h:3rem;
+	--input-border-w:2px;
+	--input-border-focus-w:4px;
+	--hambureger-w:1rem;
+	--hamburegr-h:1rem;
+	--hamburegr-s:calc( sqrt( pow(var(--hambureger-w),2) + pow(var(--hamburegr-h) ,2) ) );
+	--hamburger-g:.1rem;
+	--hamburger-t:.2rem;
+	--hamburegr-cl:black;
+
+	--roundness: 10000000px;
+}
+#nav{
+       	background-color:var(--nav-bgcl);
+	color:var(--nav-fgcl);
+	height:var(--nav-h) ;
+}
+#nav a {
+	all:unset;
+	padding :calc(var(--nav-h)/3) .5rem;
+	height: calc(var(--nav-h)/3) ;
+	display:inherit;
+}
+#searchbox{
+	display:inherit;
+	height: var(--nav-h) ;
+}
+#search::placeholder{
+	color:var(--inputplaceholher);
+	font-style:italic;
+}
+#search:hover{
+	outline-color: var(--input-hover-outline);
+	outline-width:var(--input-border-hover-w);
+	background:var(--input-hover-bg);
+}
+#search:focus{
+	outline-color: var(--acent);
+	outline-width:var(--input-border-focus-w);
+	background:var(--input-focus-bg);
+
+}
+#searchbutton svg {
+	height:calc(var(--nav-h)/4 );
+	left:calc((var(--nav-h)/2 - var(--nav-h)/4)/2 );
+	top:calc((var(--nav-h)/2 - var(--nav-h)/4)/2 );
+	aspect-ratio:1/1;
+	position:absolute;
+}
+#searchbutton:active{
+	background:var(--button-pressbg);
+}
+#searchbutton:hover{
+	background:var(--button-hoverbg);
+}
+#searchbutton {
+	position:relative;
+	aspect-ratio:1/1;
+	margin:calc(var(--nav-h)/4) .5rem;
+	height:calc(var(--nav-h)/2 );
+	display:inline-block;
+	float:left;
+	background:var(--buttonbg);
+	border-radius:10000000px;
 
 }
 
-
-li {
-  list-style: none;
+#search{
+	padding:0 .5rem;
+	margin:calc(var(--nav-h)/4) .5rem;
+	height:calc(var(--nav-h)/2 );
+	outline-color: var(--bordercl);
+	outline-style:solid;
+	border-width:0;
+	outline-width:var(--input-border-w);
+	border-radius:var(--roundness);
+	background:var(--inputbg);
+	color:var(--inputfg);
+}
+#nav ul li:nth-last-child(1){
+	float:right;
 }
 
+#nav li {
+	height: var(--nav-h) ;
+	display: inline-block;
 
-.nav-button a {
-  color: #fff;
 }
-
-.info {
-  font-size: 20px;
-  color :black;
-  margin-left: 3;
+#nav a:hover {
+	background:var(--nav-button-hover-bg);
+	color:var(--nav-button-hover-fg);
 }
+#hamburger { display:none;}
 
-
-.links {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
+@media (max-width: 700px) {
+input[type='checkbox']:not(:checked)+ul {
+	display:none;
 }
+	#tb {
+	margin-top:calc(var(--nav-h)/4);
+	}
+	
 
-.links li {
-  padding: 5px 14px;
+	#bb {
+	margin-top:calc(var(--nav-h)/4 + var(--hamburger-g) * 2 + var(--hamburger-t) * 2);
+	}
+	#me{
+	margin-top:calc(var(--nav-h)/4 + var(--hamburger-g) + var(--hamburger-t));
+	}
+	#tb,#me,#bb {
+		position:absolute;
+		z-index:3;
+	margin-left:1rem;
+	margin-right:1rem;
+		height:var(--hamburger-t);
+		width:var(--hambureger-w);
+		background:var(--hamburegr-cl);
+		display:block;
+		top:0;
+		left:0;
+	}
+	#nav #hamburger:checked ~ span{
+		opacity:0;
+	}
+	#hamburger {
+		position:relative;
+		z-index:8;
+		cursor:pointer;
+		opacity:0;
+		float: left;
+		display:block;
+	margin:calc(var(--nav-h)/4) 1rem;
+	height:calc(var(--nav-h)/2 );
+	outline-color: var(--bordercl);
+	}
+	#hamburger:checked{
+
+	}
+	#nav li {
+		display: block;
+	}
+	#nav ul {
+		background: var(--nav-menu-bg);
+		height: calc(100vh - var(--nav-h));
+		top: calc(var(--nav-h));
+		position:fixed;
+		
+	}
 }
-
-input[type=checkbox] {
-  display: none;
-} 
-
-
