@@ -130,6 +130,23 @@ if(isset($_GET['search'])){
                     echo " </a>  </div>";
                 }
                 ?>
+            
+        </div>
+
+            <h1 class="hot-categories" style=" margin-top: 80px;">ایتم های داغ</h1>
+            <div class="categories" class="amir">
+            <?php
+            require"../view/hot-items.php";
+            foreach ($rows as $row) {
+
+                echo "<div class='category'>";
+                echo "<a href=''>";
+                echo " <img src='picture/palette-svgrepo-com.svg'>";
+               echo  $items[] = $row['name'] . "<br>" . $row['rating'] . "<br>";
+                echo " </a>  </div>";
+
+            }
+            ?>
             </div>
         </div>
         <footer class="footer">
