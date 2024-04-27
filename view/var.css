@@ -7,6 +7,37 @@
     --text-btn-col: #1f293a;
     --back-btn-col: #0ef;
     --link-col: #0ef;
-    --danger-col :rgb(55, 51, 51);
+    --danger-col : #f72585;
+
+
+    --back: #FFFFFF;
+    --button: #1F7A8C;
+    --title:#BFDBF7;
+    --text:#022B3A;
+    --border : #BFDBF7;
+--link:#4EEAF6;
+--shadow:#E3E1D9;
+
+
+
+    --text-hover:#291F71;
+    --border-hover: #69778d;
+    --shadow-hover:#B4B4B8;
 }
 
+
+/*
+color in theme for site
+blue
+white
+grey
+purple
+
+site for select color 
+https://colorhunt.co/palette
+link for select color
+https://colorhunt.co/palette/1e03420e46a39ac8cde1f7f5
+https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e
+https://colorhunt.co/palette/211951836fff15f5baf0f3ff
+https://colorhunt.co/palette/f7f7f84eeaf6c82586291f71
+https://colorhunt.co/palette/b4b4b8c7c8cce3e1d9f2efe5
