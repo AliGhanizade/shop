@@ -4,8 +4,8 @@
 	font-family: Arial;
 }
 :root{
-	--nav-bgcl:blue;
-	--nav-fgcl:white;
+	--nav-bgcl:#E1F7F5;
+	--nav-fgcl:#1E0342;
 	--bordercl:gray;
 	--acent:green;
 	--inputbg:darkgray;
@@ -16,10 +16,10 @@
 	--input-focus-bg:white;
 	--inputfg:white;
 	--nav-button-hover-bg:white;
-	--nav-button-hover-fg:black;
-	--nav-menu-bg:navy;
+	--nav-button-hover-fg:#1E0342;
+	--nav-menu-bg:#9AC8CD;
 	--button-hoverbg:navy;
-	--button-pressbg:black;
+	--button-pressbg:#1E0342;
 	--inputplaceholher:lightgray;
 	--nav-h:3rem;
 	--input-border-w:2px;
