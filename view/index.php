@@ -50,7 +50,7 @@ if(isset($_GET['s'])){
 	    <a href="#" class="nav-item">پیگیری سفارشات</a>
 	    <a href="#" class="nav-item">درباره ما</a>
 	</div> -->
-	<img style="width: 100vw;    height: auto;    margin-top: 20px;" src="picture/1.jpg" alt="">
+	<img style="width: 100vw;    height: auto;    margin-top: 2px;" src="picture/1.jpg" alt="">
 	<div class="categories" class="amir" style="margin-top: 50px; ">
 	    <div class="category">
 		<a href="category1.html">
