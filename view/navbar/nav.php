@@ -4,11 +4,12 @@
 	<span id=me></span>
 	<span id=bb></span>
 	<ul>
-		<li><a href="/">test</a></li>
+		<li><a href="cart.php">سبد خرید</a></li>
 		<li><a href="/">test</a></li>
 		<li><a href="/">test</a></li>
 		<li><a href="/">test</a></li>
 		<li>
+		
 		<?php if ($username == false) {
 		echo '<a class="btn" href="sign-up.php">ورود / ثبت نام </a>';
 		} else {

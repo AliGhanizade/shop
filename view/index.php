@@ -12,17 +12,17 @@ if (($userid = loggedin()) !== false) {
 if(isset($_GET['s'])){
 	$db = new PDO('sqlite:db.db');
 	$searchTerm = $_GET['search'];
-	$query = "SELECT * FROM categories WHERE categoryname LIKE '%$searchTerm%'";
+	$query = "SELECT name FROM items WHERE name LIKE '%$searchTerm%'";
 	$result = $db->query($query);
 	while ($row = $result->fetch(PDO::FETCH_ASSOC)){
 		echo '<div class="result">';
-		echo '<h3>' . $row['categoryname'] . '</h3>';
-		$categoryId = $row['categoryid'];
-		$productsQuery = "SELECT * FROM categories WHERE categoryid = $categoryId";
+		echo '<h3>' . $row['name'] . '</h3>';
+		$itemId = $row['itemid'];
+		$productsQuery = "SELECT itemid FROM items WHERE itemid = $itemId";
 		$productsResult = $db->query($productsQuery);
 		while ($product = $productsResult->fetch(PDO::FETCH_ASSOC))
 		{
-			echo '<p>' . $product['categoryname'] . '</p>';
+			echo '<p>' . $product['name'] . '</p>';
 		}
 		echo '</div>';
 	}
@@ -44,12 +44,10 @@ if(isset($_GET['s'])){
 </head>
 
 <body>
+	<!--navbar-->
 <?php require "./navbar/nav.php";?>
-	<!-- <div class="second-row">
-	    <a href="#" class="nav-item">دسته بندی</a>
-	    <a href="#" class="nav-item">پیگیری سفارشات</a>
-	    <a href="#" class="nav-item">درباره ما</a>
-	</div> -->
+<!----------------------------------->
+
 	<img style="width: 100vw;    height: auto;    margin-top: 2px;" src="picture/1.jpg" alt="">
 	<div class="categories" class="amir" style="margin-top: 50px; ">
 	    <div class="category">
