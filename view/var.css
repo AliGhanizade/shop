@@ -1,28 +1,31 @@
-
 :root {
-   background-color: #1f293a;
+    --background-color: #1f293a;
     --h2-col: #0ef;
     --border-col1: #2c4766;
     --border-col2: #0ef;
     --text-btn-col: #1f293a;
     --back-btn-col: #0ef;
     --link-col: #0ef;
-    --danger-col : #f72585;
+    --danger-col: #f72585;
 
 
     --back: #FFFFFF;
     --button: #1F7A8C;
-    --title:#BFDBF7;
-    --text:#022B3A;
-    --border : #BFDBF7;
---link:#4EEAF6;
---shadow:#E3E1D9;
+    --title: #BFDBF7;
+    --text: #022B3A;
+    --border: #BFDBF7;
+    --border-carts: #6aabec;
+    --back-checkout: #f8f7f7;
+    --button-checkout: #319aaf;
+    --text-checkout:#4b4b4b;
+    --hr-checkout:#787c83;
+    --link: #4EEAF6;
+    --shadow: #E3E1D9;
 
 
-
-    --text-hover:#291F71;
+    --text-hover: #291F71;
     --border-hover: #69778d;
-    --shadow-hover:#B4B4B8;
+    --shadow-hover: #B4B4B8;
 }
 
 
