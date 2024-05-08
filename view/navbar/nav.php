@@ -4,10 +4,10 @@
 	<span id=me></span>
 	<span id=bb></span>
 	<ul>
-		<li><a href="cart.php">سبد خرید</a></li>
 		<li><a href="/">test</a></li>
 		<li><a href="/">test</a></li>
 		<li><a href="/">test</a></li>
+		<li><a href="../cart.html">سبد خرید</a></li>
 		<li>
 		
 		<?php if ($username == false) {
