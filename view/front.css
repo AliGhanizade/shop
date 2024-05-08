@@ -1,6 +1,6 @@
 @import "var.css";
 
-body  {
+body {
   background-color: var(--back);
 }
 
@@ -9,34 +9,34 @@ img {
   margin: 0 auto;
 }
 
-figure{
+figure {
   max-width: 100%;
   text-align: center;
 }
 
-h2{
+h2 {
   color: var(--title);
 }
 
-link{
+link {
   color: var(--link);
 }
 
 h1.hot-categories {
   text-align: center;
   font-size: 80px;
-  background:var(--text); 
+  background: var(--text);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   padding: 10px 0;
-  margin: 20px 0;  
+  margin: 20px 0;
   /* color: #000;  */
 }
 
 @media screen and (max-width: 768px) {
   h1.hot-categories {
-    font-size: 40px; 
+    font-size: 40px;
     display: block;
     text-align: center;
   }
@@ -45,86 +45,204 @@ h1.hot-categories {
 .container {
   position: relative;
   text-align: center;
- }
+}
 
 .categories {
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    display: flex;  flex-wrap: wrap;
-    /*flex-wrap: wrap;
-    align-items: flex-start;*/ /* display: grid; */
-    /* grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-wrap: wrap;
+    align-items: flex-start;*/
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); */
 }
 
 .category {
-    text-align: center;
-    margin: 10px;
-    border: 1px solid var(--border);
-    box-shadow: 2px 2px 1px var(--shadow);
-    padding: 22px;
-    border-radius: 5px;
-    background-color:  var(--back);
-    transition: background-color 0.3s;
-    width: 200px;
-   /* display: flex;
+  text-align: center;
+  margin: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 2px 2px 1px var(--shadow);
+  padding: 22px;
+  border-radius: 5px;
+  background-color: var(--back);
+  transition: background-color 0.3s;
+  width: 200px;
+  /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    /*flex: 1 1 20%;
+  /*flex: 1 1 20%;
     flex-grow: 1;*/
-  }
+}
 
-  .category img{
-    object-fit: cover;
+.category img {
+  object-fit: cover;
 
-    width: 100%;
-    height: 150px;   
-     /* max-width: 100%;
+  width: 100%;
+  height: 150px;
+  /* max-width: 100%;
     max-height: 100%; */
+}
+
+.category p {
+  margin-top: 10px;
+}
+
+.category a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.category a:hover,
+.category a:hover p {
+  color: var(--text-hover);
+}
+
+.category:hover {
+  box-shadow: 8px 7px 10px 7px var(--shadow-hover);
+  border-color: var(--border-hover);
+}
+
+@media screen and (max-width: 480px) {
+  .categories .carts {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 
-  .category p {
-margin-top: 10px;
+  .carts {
+    width: 100%;
   }
-  .category a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
+
+  .checkout {
+    width: 96%;
   }
- 
-  .category a:hover,
-  .category a:hover p {
-  color: var(--text-hover);  
+}
+
+@media screen and (max-width: 768px) {
+  .categories {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
- 
-  .category:hover{
-    box-shadow: 8px 7px 10px 7px var(--shadow-hover);
-    border-color: var(--border-hover);
+
+  .carts {
+    width: 100%;
   }
-    
-  @media screen and (max-width: 768px) {
-    .categories {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
+
+  .checkout {
+    width: 96%;
   }
-  @media screen and (max-width: 480px) {
-    .categories {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));;
-    }
-    }
-    @media screen and (min-width: 1200px) {
-      .categories{
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      }
-    }
-    @media screen and (min-width: 1920px) {
-      .categories {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      }
-      
-    }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .categories {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .carts {
+    border: 1px solid var(--border-carts);
+    border-radius: 5px;
+    width: 58%;
+  }
+
+  .chckout {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .categories {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .carts {
+    border: 1px solid var(--border-carts);
+    border-radius: 5px;
+    width: 58%;
+  }
+
+  .checkout {
+    width: 30%;
+  }
+}
+
+/*add for cart*/
+.bascket {
+  min-height: 400px;
+  align-items: normal;
+  justify-content: center;
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carts {
+  justify-content: start;
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemincart {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 2px 2px 1px var(--shadow);
+  padding: 22px;
+  border-radius: 5px;
+  background-color: var(--back);
+  transition: background-color 0.3s;
+  width: 95%;
+}
+
+.itemincart:hover {
+  box-shadow: 6px 6px 8px 6px var(--shadow-hover);
+  border-color: var(--border-hover);
+}
+
+.itemincart .image {
+  object-fit: cover;
+  align-content: center;
+  background-position-x: center;
+  display: inline-block;
+}
+
+.itemincart .info {
+  margin-right: 10px;
+  display: inline-block;
+  padding-top: auto;
+  width: 85%;
+}
+
+.checkout {
+  border-radius: 5px;
+  margin-right: 5%;
+  height: 400px;
+  margin-left: 5%;
+  background-color: var(--back-checkout);
+  display: inline-block;
+}
+
+.checkout button {
+  font-size: 30px;
+  margin-bottom: 10px;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10%;
+  color: var(--back);
+  text-align: center;
+  background-color: var(--button-checkout);
+}
+
+.checkout hr {
+  width: 75%;
+}
+
+/*end bascket*/
 
 .separator {
   text-align: center;
@@ -149,7 +267,9 @@ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .amir {
-  display: flex; justify-content: center; flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .result {
