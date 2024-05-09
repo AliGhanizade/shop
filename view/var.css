@@ -8,24 +8,32 @@
     --link-col: #0ef;
     --danger-col: #f72585;
 
-
     --back: #FFFFFF;
     --button: #1F7A8C;
     --title: #BFDBF7;
     --text: #022B3A;
     --border: #BFDBF7;
-    --border-carts: #6aabec;
-    --back-checkout: #f8f7f7;
-    --button-checkout: #319aaf;
-    --text-checkout:#4b4b4b;
-    --hr-checkout:#787c83;
     --link: #4EEAF6;
     --shadow: #E3E1D9;
-
-
+    --shadow-hover: #B4B4B8;
     --text-hover: #291F71;
     --border-hover: #69778d;
-    --shadow-hover: #B4B4B8;
+    
+    --back-bascket: #fcfcfc;
+
+    --border-carts:#E3E1D9;
+    
+    --border-items: #BFDBF7;
+    --shadow-items: #E3E1D9;
+    --back-items: #FaFaFa;
+
+    --back-checkout: #f8f7f7;
+    --button-checkout: #55c3da;
+    --text-checkout: #4b4b4b;
+    --hr-checkout: #787c83;
+    --border-checkout: #E3E1D9;
+    
+    --button-checkout-hover: #60daf3;
 }
 
 
