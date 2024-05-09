@@ -116,6 +116,7 @@
 #nav a:hover {
 	background:var(--nav-button-hover-bg);
 	color:var(--nav-button-hover-fg);
+	cursor: pointer;
 }
 #hamburger { display:none;}
 
