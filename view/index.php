@@ -48,7 +48,7 @@ if(isset($_GET['s'])){
 <?php require "./navbar/nav.php";?>
 <!----------------------------------->
 	  <script >		
-		  /*
+		 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 function switchTheme(e) {
     if (e.target.checked) {
@@ -80,9 +80,9 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
-*/
+
 		</script>
-	<img style="width: 100vw;    height: auto;    margin-top: 2px;" src="picture/1.jpg" alt="">
+	<img style="width: 100vw;    height: auto;    " src="picture/1.jpg" alt="">
 	<div class="separator" style="margin-top: 50px;">
 	    <h1 class="hot-categories" style=" margin-top: 80px;">دسته های داغ</h1>
 	    <div class="categories" class="amir">
