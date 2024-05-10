@@ -7,7 +7,7 @@
 		<li><a href="/">test</a></li>
 		<li><a href="/">test</a></li>
 		<li><a href="/">test</a></li>
-		<li><a href="../cart.html">سبد خرید</a></li>
+		<li><a href="cart.html">سبد خرید</a></li>
 		<li>
 		
 		<?php if ($username == false) {
@@ -16,6 +16,17 @@
 		$husername = htmlentities($username);
 		echo '<a href="userpage/?=username"' . $husername . '>' . $husername . '</a>';
 		} ?>
+		</li>
+		<li>
+		
+				<div class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div class="slider round"></div>
+					</label>
+
+				</div>
+			
 		</li>
 		<li>
 			<form id=searchbox method="get">
