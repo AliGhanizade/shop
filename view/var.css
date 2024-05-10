@@ -36,6 +36,15 @@
     --button-checkout-hover: #60daf3;
 }
 
+[data-theme="dark"] {
+    --back: #919191;
+    --button: #046077;
+    --text:#ffffff;
+    --title:#cfcfcf;
+    --border : #ebd5f0;
+--link:#dbeef0;
+--shadow:#66534b;
+}
 
 /*
 color in theme for site
