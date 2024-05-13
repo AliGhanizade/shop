@@ -41,6 +41,7 @@ if(isset($_GET['s'])){
     <link rel="stylesheet" href="tap.bar footer.css">
     <link rel="stylesheet" href="search.php">
 		<link rel="stylesheet" href="./navbar/style.css" />
+<script src="/view/js/_hyperscript.min.js" > </script>
 </head>
 
 <body>
