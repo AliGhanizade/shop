@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--back);
+  background: var(--back-lgn);
   min-height: 100vh;
 }
 
@@ -44,8 +44,9 @@ body {
 
 
 h2 {
+  text-shadow: 2px 2px 1px var(--shadow-lgn);
   font-size: 2em;
-  color: var(--title);
+  color: var(--title-lgn);
   text-align: center;
 }
 .input-box {
@@ -57,20 +58,21 @@ h2 {
 .input-box input {
   width: 100%;
   height: 50px;
-  background: transparent;
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-input-lgn );
   outline: none;
   border-radius: 40px;
   font-size: 1em;
-  color: var(--border);
+  color: var(--text-input-lgn);
   padding: 0 20px;
-  transition: 2s;
-  
+  box-shadow: 4px 4px 2px var(--shadow-lgn); 
+  &:hover{
+    box-shadow: 6px 6px 3px var(--shadow-lgn);
+  }
 }
 
-.input-box input:focus,
-.input-box input:not(:placeholder-shown) {
-  border-color: var(--border);
+.input-box input:focus {
+  border-color: var(--border-input-focus-lgn);
+  background-color:var(--lable-input-focus-back-lgn) ;
 }
 
 .input-box label {
@@ -79,7 +81,7 @@ h2 {
   right: 20px;
   transform: translateY(-50%);
   font-size: 1em;
-  color: var(--border);
+  color: var(--lable-input-lgn);
   pointer-events: none;
   transition: 0.5s ease;
 }
@@ -88,13 +90,13 @@ h2 {
 .input-box input:not(:placeholder-shown) ~ label {
   top: 1px;
   font-size: 0.8em;
-  background-color: var(--back);
+  background-color: var(--lable-input-focus-back-lgn);
   padding: 1px 5px;
-  color: var(--border);
+  color: var(--lable-input-focus-lgn);
 }
 
 .danger{
-  color: var(--danger-col);
+  color: var(--danger-col-lgn);
   font-size: 0.8em;
   margin-right: 20px;
 }
@@ -103,14 +105,18 @@ h2 {
   width: 100%;
   height: 45px;
   border-radius: 45px;
-  background: var(--button);
+  background: var(--button-lgn);
   border: none;
   outline: none;
   cursor: pointer;
   font-size: 1em;
-  color: var(--title);
+  color: var(--text-button-lgn);
   font-weight: 600;
   margin: 15px 0;
+  box-shadow: 4px 4px 2px var(--shadow-lgn);
+  &:hover{
+    box-shadow: 6px 6px 3px var(--shadow-lgn);
+  }
 }
 
 .signup-link {
@@ -120,11 +126,14 @@ h2 {
 
 .signup-link a {
   font-size: 1em;
-  color: var(--link);
+  color: var(--link-lgn);
   text-decoration: none;
   font-weight: 600;
+  text-shadow: 2px 2px 1px var(--shadow-lgn);
+  &:hover{
+    text-shadow: 4px 4px 2px var(--shadow-lgn);
+    text-decoration: underline; 
+  }
 }
 
-.signup-link a:hover {
-  text-decoration: underline;
-}
+
