@@ -1,130 +1,5 @@
-
-* {
-	margin: 0;
-	padding: 0;
-	font-family: Arial;
-}
-
 :root {
-	--nav-bgcl: #E1F7F5;
-	--nav-fgcl: #1E0342;
-	--bordercl: gray;
-	--acent: #638d94;
-	--inputbg: #c9c9c9;
-	--buttonbg: #c9c9c9;
-	--input-hover-outline: #7eafb8;
-	--input-hover-bg: #bbb;
-	--input-border-hover-w: #fff;
-	--input-focus-bg: #b0c4cc;
-	--inputfg: #ffffff;
-	--nav-button-hover-bg: #fff;
-	--nav-button-hover-fg: #1E0342;
-	--nav-menu-bg: #9AC8CD;
-	--button-hoverbg: #b0c4cc;
-	--button-pressbg: #79b9d3;
-	--inputplaceholher: lightgray;
-	--nav-h: 3rem;
-	--input-border-w: 2px;
-	--input-border-focus-w: 4px;
-	--transition: 100ms;
-	--hamburger-w: 1rem;
-	--hamburger-h: 1rem;
-	--hamburger-g: .1rem;
-	--hamburger-t: calc((var(--hamburger-h) - var(--hamburger-g) * 2) / 3);
-	--hamburger-cl: black;
-	--roundness: 10000000px;
-
-	background-color: var(--nav-bgcl);
-	color: var(--nav-fgcl);
-}
-
-#nav {
-	background-color: var(--nav-bgcl);
-	color: var(--nav-fgcl);
-	height: var(--nav-h);
-}
-
-#nav a {
-	all: unset;
-	padding: calc(var(--nav-h) / 3) .5rem;
-	height: calc(var(--nav-h) / 3);
-	display: inherit;
-}
-
-#searchbox {
-	display: inherit;
-	height: var(--nav-h);
-}
-
-#search::placeholder {
-	color: var(--inputplaceholher);
-	font-style: italic;
-}
-#search:hover{
-	outline-color: var(--input-hover-outline);
-	outline-width:var(--input-border-hover-w);
-	background:var(--input-hover-bg);
-}
-#search:focus{
-	outline-color: var(--acent);
-	outline-width:var(--input-border-focus-w);
-	background:var(--input-focus-bg);
-
-}
-#searchbutton svg {
-	height:calc(var(--nav-h)/4 );
-	left:calc((var(--nav-h)/2 - var(--nav-h)/4)/2 );
-	top:calc((var(--nav-h)/2 - var(--nav-h)/4)/2 );
-	aspect-ratio:1/1;
-	position:absolute;
-}
-#searchbutton:active{
-	background:var(--button-pressbg);
-}
-#searchbutton:hover{
-	background:var(--button-hoverbg);
-}
-#searchbutton {
-	position:relative;
-	aspect-ratio:1/1;
-	margin:calc(var(--nav-h)/4) .5rem;
-	height:calc(var(--nav-h)/2 );
-	display:inline-block;
-	float:left;
-	background:var(--buttonbg);
-	border-radius:10000000px;
-
-}
-
-#search{
-	padding:0 .5rem;
-	margin:calc(var(--nav-h)/4) .5rem;
-	height:calc(var(--nav-h)/2 );
-	outline-color: var(--bordercl);
-	outline-style:solid;
-	border-width:0;
-	outline-width:var(--input-border-w);
-	border-radius:var(--roundness);
-	background:var(--inputbg);
-	color:var(--inputfg);
-}
-#nav ul li:nth-last-child(1){
-	float:right;
-}
-
-#nav li {
-	height: var(--nav-h) ;
-	display: inline-block;
-
-}
-#nav a:hover {
-	background:var(--nav-button-hover-bg);
-	color:var(--nav-button-hover-fg);
-	cursor: pointer;
-}
-#hamburger { display:none;}
-
-:root {
+    /*FERST TRY */
     --background-color: #1f293a;
     --h2-col: #0ef;
     --border-col1: #2c4766;
@@ -132,30 +7,55 @@
     --text-btn-col: #1f293a;
     --back-btn-col: #0ef;
     --link-col: #0ef;
-    --danger-col: #f72585;
-    background-color: var(--nav-bgcl);
-    color: var(--nav-fgcl);
+    
+    /* INDEX */
     --back: #FFFFFF;
     --button: #1F7A8C;
     --title: #BFDBF7;
     --text: #022B3A;
     --border: #BFDBF7;
-    --link: #4EEAF6;
     --shadow: #E3E1D9;
+    
     --shadow-hover: #B4B4B8;
     --text-hover: #291F71;
     --border-hover: #69778d;
+    
+    /*LOGIN AND SINGUP*/
+    --back-lgn: #FFFFFF;
+    --title-lgn: #5e91c4;
+    
+    --border-input-lgn: #7fa3c7;
+    --text-input-lgn: #022B3A;
+    --danger-col-lgn: #f72585;
+    
+    --lable-input-lgn:#619ff0;
+    --text-button-lgn: #ffffff;
+    --button-lgn: #1F7A8C;
+    --shadow-lgn: #E3E1D9;
+    --link-lgn: #9ebcf5;
+    
+    --border-input-focus-lgn:#7072d1;
+    --lable-input-focus-lgn:#619ff0;
+    --lable-input-focus-back-lgn:#ffffff;
+    
+    
+    /*BASCKET*/
     --back-bascket: #fcfcfc;
-    --border-carts:#E3E1D9;
+
+    --border-carts: #E3E1D9;
+
     --border-items: #BFDBF7;
     --shadow-items: #E3E1D9;
     --back-items: #FaFaFa;
+
     --back-checkout: #f8f7f7;
     --button-checkout: #55c3da;
     --text-checkout: #4b4b4b;
     --hr-checkout: #787c83;
     --border-checkout: #E3E1D9;
+
     --button-checkout-hover: #60daf3;
+
 }
 
 [data-theme="dark"] {
