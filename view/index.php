@@ -85,7 +85,7 @@ if (currentTheme) {
 	<img style="width: 100vw;    height: auto;    " src="picture/1.jpg" alt="">
 	<div class="separator" style="margin-top: 50px;">
 	    <h1 class="hot-categories" style=" margin-top: 80px;">دسته‌های داغ</h1>
-	    <div class="categories" class="amir">
+	    <div dir="rtl" class="categories" class="amir">
 <?php require "../view/hot-cate.php";
 foreach ($rows as $row) {
 	echo "<div class='category'>";
@@ -99,7 +99,7 @@ foreach ($rows as $row) {
 	</div>
 
 	    <h1 class="hot-categories" style=" margin-top: 80px;">کالا‌های داغ</h1>
-	    <div class="categories" class="amir">
+	    <div dir="rtl" class="categories" class="amir">
 <?php
 require"../view/hot-items.php";
 foreach ($item as $item_row) {
