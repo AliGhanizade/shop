@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="front.css">
     <link rel="stylesheet" href="./navbar/style.css">
+    <script src="/view/js/_hyperscript.min.js" > </script>
 </head>
 <header dir="ltr">
 
@@ -40,8 +41,6 @@ if(isset($_GET['s'])){
     $db = null;
 }
 require "./navbar/nav.php";
-
-
 ?>
 
 </header>

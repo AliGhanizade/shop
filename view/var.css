@@ -7,7 +7,7 @@
     --text-btn-col: #1f293a;
     --back-btn-col: #0ef;
     --link-col: #0ef;
-    
+
     /* INDEX */
     --back: #FFFFFF;
     --button: #1F7A8C;
@@ -15,30 +15,30 @@
     --text: #022B3A;
     --border: #BFDBF7;
     --shadow: #E3E1D9;
-    
+
     --shadow-hover: #B4B4B8;
     --text-hover: #291F71;
     --border-hover: #69778d;
-    
+
     /*LOGIN AND SINGUP*/
     --back-lgn: #FFFFFF;
     --title-lgn: #5e91c4;
-    
+
     --border-input-lgn: #7fa3c7;
     --text-input-lgn: #022B3A;
     --danger-col-lgn: #f72585;
-    
-    --lable-input-lgn:#619ff0;
+
+    --lable-input-lgn: #619ff0;
     --text-button-lgn: #ffffff;
     --button-lgn: #1F7A8C;
     --shadow-lgn: #E3E1D9;
     --link-lgn: #9ebcf5;
-    
-    --border-input-focus-lgn:#7072d1;
-    --lable-input-focus-lgn:#619ff0;
-    --lable-input-focus-back-lgn:#ffffff;
-    
-    
+
+    --border-input-focus-lgn: #7072d1;
+    --lable-input-focus-lgn: #619ff0;
+    --lable-input-focus-back-lgn: #ffffff;
+
+
     /*BASCKET*/
     --back-bascket: #fcfcfc;
 
@@ -59,13 +59,37 @@
 }
 
 :root[data-theme-dark="true"] {
-    --back: #919191;
+    /* INDEX */
+    --back: #112D4E;
+    --back-category: #274c77;
     --button: #046077;
-    --text: #ffffff;
-    --title: #cfcfcf;
-    --border: #ebd5f0;
-    --link: #dbeef0;
-    --shadow: #66534b;
+    --text: #dfdfdf;
+    --title: #c7c6c6;
+    --border: #00255e;
+    --link: #8ba8ac;
+    --shadow: #334850;
+    --border-separator:#003a92;
+    --shadow-hover: #18183b;
+    --text-hover: #d6d6d6;
+    --border-hover: #82b7e7;
+    /*LOGIN AND SINGUP*/
+    --back-lgn: #FFFFFF;
+    --title-lgn: #5e91c4;
+
+    --border-input-lgn: #7fa3c7;
+    --text-input-lgn: #022B3A;
+    --danger-col-lgn: #f72585;
+
+    --lable-input-lgn: #619ff0;
+    --text-button-lgn: #ffffff;
+    --button-lgn: #1F7A8C;
+    --shadow-lgn: #E3E1D9;
+    --link-lgn: #9ebcf5;
+
+    --border-input-focus-lgn: #7072d1;
+    --lable-input-focus-lgn: #619ff0;
+    --lable-input-focus-back-lgn: #ffffff;
+
 }
 
 /*
