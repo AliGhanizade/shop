@@ -84,12 +84,12 @@ if (currentTheme) {
 		</script>
 	<img style="width: 100vw;    height: auto;    " src="picture/1.jpg" alt="">
 	<div class="separator" style="margin-top: 50px;">
-	    <h1 class="hot-categories" style=" margin-top: 80px;">دسته های داغ</h1>
+	    <h1 class="hot-categories" style=" margin-top: 80px;">دسته‌های داغ</h1>
 	    <div class="categories" class="amir">
 <?php require "../view/hot-cate.php";
 foreach ($rows as $row) {
 	echo "<div class='category'>";
-	echo "<a href=category/$row[categoryid] >";
+	echo "<a href=../category/$row[categoryid] >";
 	echo " <img src=' $row[categoryimage]'>";
 	echo $categories[] = $row['categoryname'];
 	echo " </a>  </div>";
@@ -98,17 +98,25 @@ foreach ($rows as $row) {
 
 	</div>
 
-	    <h1 class="hot-categories" style=" margin-top: 80px;">ایتم های داغ</h1>
+	    <h1 class="hot-categories" style=" margin-top: 80px;">کالا‌های داغ</h1>
 	    <div class="categories" class="amir">
 <?php
 require"../view/hot-items.php";
-foreach ($rows as $row) {
-
-	echo "<div class='category'>";
-	echo "<a href=''>";
-	echo " <img src='picture/palette-svgrepo-com.svg'>";
-	echo  $items[] = $row['name'] . "<br>" . $row['rating'] . "<br>";
-	echo " </a>  </div>";
+foreach ($item as $item_row) {
+    $qu_attributes = "SELECT * from attributes where itemid ='$item_row[itemid]' AND key = 'pic' ";  
+    $stmt = $dbh->prepare($qu_attributes);
+    $stmt->execute();
+    $attributes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    echo "<div class='category'>";
+	echo "<a href=../$item_row[category]$item_row[name]>";
+    foreach ($attributes as $attributes_row) {
+       
+         
+         echo " <img src='$attributes_row[value]'>";
+    }
+	echo  $items[] = $item_row['name'] . "<br>" . $item_row['rating'] . "<br>";
+	echo "</div>";
 
 }
 ?>
@@ -125,8 +133,8 @@ foreach ($rows as $row) {
 		<a href="#" style="margin-top: 8px;">خدمات مشتریان</a>
 	    </div>
 	    <div class="footer-right">
-		<p>شماره تماس: 12345678</p>
-		<p>amirhosseinfatemicod1385@gmail.com :ایمیل</p>
+		<p>شماره تماس:36665666-051</p>
+		<p>SiteforTest@gmail.com :ایمیل</p>
 		<p>آدرس: خیابان معلم ، معلم 53 ، بین قایم مقام 32 34</p>
 	    </div>
 	</footer>
