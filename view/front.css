@@ -176,7 +176,7 @@ h1.hot-categories {
 /*add for cart*/
 .bascket {
   background-color: var(--back-bascket);
-  margin-top: 50px;
+  margin-top: 5px;
   align-items: normal;
   justify-content: center;
   display: flex;
