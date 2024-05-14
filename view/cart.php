@@ -157,6 +157,30 @@ require "./navbar/nav.php";
       ?>
 
     </div>
+        <h1 class="hot-categories" style=" margin-top: 80px;">کالا‌های داغ</h1>
+	    <div dir="rtl" class="categories" class="amir">
+<?php
+require"../view/hot-items.php";
+foreach ($item as $item_row) {
+    $qu_attributes = "SELECT * from attributes where itemid ='$item_row[itemid]' AND key = 'pic' ";  
+    $stmt = $dbh->prepare($qu_attributes);
+    $stmt->execute();
+    $attributes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    echo "<div class='category'>";
+	echo "<a href=../$item_row[category]$item_row[name]>";
+    foreach ($attributes as $attributes_row) {
+       
+         
+         echo " <img src='$attributes_row[value]'>";
+    }
+	echo  $items[] = $item_row['name'] . "<br>" . $item_row['rating'] . "<br>";
+	echo "</div>";
+
+}
+?>
+	    </div>
+	</div>
 </body>
 
 </html>
