@@ -16,38 +16,38 @@ require_once "../model/user.php";
 require_once "../model/pdo.php";
 $username = false;
 if (($userid = loggedin()) !== false) {
-	if (($row = userid2username($dbh, $userid)) != false) {
-		$username = $row["username"];
-	}
+    if (($row = userid2username($dbh, $userid)) != false) {
+        $username = $row["username"];
+    }
 }
-
 if(isset($_GET['s'])){
-	$db = new PDO('sqlite:db.db');
-	$searchTerm = $_GET['search'];
-	$query = "SELECT name FROM items WHERE name LIKE '%$searchTerm%'";
-	$result = $db->query($query);
-	while ($row = $result->fetch(PDO::FETCH_ASSOC)){
-		echo '<div class="result">';
-		echo '<h3>' . $row['name'] . '</h3>';
-		$itemId = $row['itemid'];
-		$productsQuery = "SELECT itemid FROM items WHERE itemid = $itemId";
-		$productsResult = $db->query($productsQuery);
-		while ($product = $productsResult->fetch(PDO::FETCH_ASSOC))
-		{
-			echo '<p>' . $product['name'] . '</p>';
-		}
-		echo '</div>';
-	}
-	$db = null;
+    $db = new PDO('sqlite:db.db');
+    $searchTerm = $_GET['search'];
+    $query = "SELECT name FROM items WHERE name LIKE '%$searchTerm%'";
+    $result = $db->query($query);
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+        echo '<div class="result">';
+        echo '<h3>' . $row['name'] . '</h3>';
+        $itemId = $row['itemid'];
+        $productsQuery = "SELECT itemid FROM items WHERE itemid = $itemId";
+        $productsResult = $db->query($productsQuery);
+        while ($product = $productsResult->fetch(PDO::FETCH_ASSOC))
+        {
+            echo '<p>' . $product['name'] . '</p>';
+        }
+        echo '</div>';
+    }
+    $db = null;
 }
+require "./navbar/nav.php";
 
-require "./navbar/nav.php"
+
 ?>
+
 </header>
 
 <body dir="rtl">
-    <div class="bascket">
-        <div class="carts">
+<div class="carts">
             <div class="itemincart">
                 <div class="image">
                     <img src="picture/Untitled.jpg" alt="">
@@ -122,7 +122,39 @@ require "./navbar/nav.php"
             </div>
             <hr>
             <button>خرید</button>
-        </div>
+        </div> 
+    <div class="bascket">
+    <?php
+        $db = new PDO('sqlite:db.db');
+        $query = "SELECT * FROM basket UNION SELECT * FROM attributes";
+        $result = $db->query($query);
+        if ($result) {
+          while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+              echo '<div class="itemincart"&gt;';
+              echo '<div class="image">';
+              echo '<img src="picture/Untitled.jpg' /*. $row['value']*/ . '" alt="">';
+              echo '</div>';
+              echo '<div class="info">';
+              echo '<p> tyguhljik</p>';
+              echo '<a href="#">' . $row['basketid'] . '</a>';
+              echo '<p>' . $row['itemid'] . '</p>';
+              echo '<span>';
+              echo '<button>+</button>';
+              echo '<p>' . $row['itemcount'] . '</p>';
+              echo '<button>-</button>';
+              echo '</span>';
+              echo '<p> 1 </p>';
+              echo '</div>';
+              echo '<div>';
+              echo '<button>DELETE</button>';
+              echo '</div>';
+              echo '</div>';
+          }
+      } else {
+          echo 'هیچ موردی در سبد خرید وجود ندارد.';
+      }
+      $db = null;
+      ?>
 
     </div>
 </body>

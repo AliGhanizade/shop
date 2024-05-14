@@ -54,3 +54,4 @@ CREATE TABLE IF NOT EXISTS categories (
 	categoryimage	TEXT,
 	click			INTEGER
 	);
+	
