@@ -36,7 +36,7 @@
     --button-checkout-hover: #60daf3;
 }
 
-[data-theme="dark"] {
+:root[data-theme-dark="true"] {
     --back: #919191;
     --button: #046077;
     --text:#ffffff;

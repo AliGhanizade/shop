@@ -30,7 +30,7 @@ if(isset($_GET['s'])){
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html id=root lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -48,41 +48,6 @@ if(isset($_GET['s'])){
 	<!--navbar-->
 <?php require "./navbar/nav.php";?>
 <!----------------------------------->
-	  <script >		
-		 
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark'); 
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light'); 
-    }    
-}
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-}
-
-		</script>
 	<img style="width: 100vw;    height: auto;    " src="picture/1.jpg" alt="">
 	<div class="separator" style="margin-top: 50px;">
 	    <h1 class="hot-categories" style=" margin-top: 80px;">دسته‌های داغ</h1>

@@ -37,6 +37,27 @@
 
 	--roundness: 10000000px;
 }
+#switcher{
+	opacity:0;
+}
+.theme-icon-sun{
+	transform: scale(0) rotateZ(-180deg);
+}
+.theme-icon-moon{
+	transform: scale(1) rotateZ(0);
+}
+.theme-icon {
+	width:20px;
+	position:absolute;
+	transform-origin: center;
+	transition: all .5s ease;
+}
+:root[data-theme-dark=true] .theme-icon-sun{
+	transform: scale(1) rotateZ(0);
+}
+:root[data-theme-dark=true] .theme-icon-moon{
+	transform: scale(0) rotateZ(-180deg);
+}
 #nav{
        	background-color:var(--nav-bgcl);
 	color:var(--nav-fgcl);
@@ -188,3 +209,4 @@ input[type='checkbox']:not(:checked)~ul {
 		
 	}
 }
+

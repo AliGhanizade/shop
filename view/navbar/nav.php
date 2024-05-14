@@ -4,29 +4,23 @@
 	<span id=me></span>
 	<span id=bb></span>
 	<ul>
-		<li><a href="/">test</a></li>
-		<li><a href="/">test</a></li>
-		<li><a href="/">test</a></li>
 		<li><a href="cart.php">سبد خرید</a></li>
 		<li>
-		
-		<?php if ($username == false) {
-		echo '<a class="btn" href="sign-up.php">ورود / ثبت نام </a>';
+
+<?php if ($username == false) {
+echo '<a class="btn" href="sign-up.php">ورود / ثبت نام </a>';
 		} else {
-		$husername = htmlentities($username);
-		echo '<a href="userpage/?=username"' . $husername . '>' . $husername . '</a>';
+			$husername = htmlentities($username);
+			echo '<a href="userpage/?=username"' . $husername . '>' . $husername . '</a>';
 		} ?>
 		</li>
 		<li>
-		
-				<div class="theme-switch-wrapper">
-					<label class="theme-switch" for="checkbox">
-						<input type="checkbox" id="checkbox" />
-						<div class="slider round"></div>
-					</label>
+<label>
+<img class="theme-icon theme-icon-sun" src="/view/picture/sun.svg">
+<img class="theme-icon theme-icon-moon" src="/view/picture/moon.svg">
 
-				</div>
-			
+			<input id=switcher type=checkbox _="on click toggle [@data-theme-dark=true] on #root">
+</label>
 		</li>
 		<li>
 			<form id=searchbox method="get">
