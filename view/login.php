@@ -14,12 +14,12 @@
     <h2>ورود</h2>
     <form method=post>
       <div class="input-box">
-      <input name=user type="text" required value="<?=htmlentities($logins["user"]??'')?>">
+      <input name=user type="text" placeholder="" required value="<?=htmlentities($logins["user"]??'')?>">
         <label>نام کاربری</label>
       </div>
       <div> <label class="danger"><?=$error["user"]??''?></label> </div>
       <div class="input-box">
-      <input name=pass type="password" required value="<?=htmlentities($logins["pass"]??'')?>">
+      <input name=pass type="password" placeholder="" required value="<?=htmlentities($logins["pass"]??'')?>">
         <label>رمز</label>
       </div>
     <div> <label class="danger"><?=$error["pass"]??''?></label> </div>
